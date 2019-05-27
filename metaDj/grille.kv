@@ -1,0 +1,156 @@
+#kivy 1.0
+
+
+
+<GrilleWidget>
+	canvas:
+		Color:
+			rgb: 0.05, 0.05, 0.05
+		Rectangle:
+			size: 800, 480
+		Color:
+			rgb: 0.7, 0.7, 0.7
+		Line:
+			width: 1.0
+			points: root.table1
+		Line:
+			width: 1.0
+			points: root.table2
+		Line:
+			width: 1.0
+			points: root.table3
+		Line:
+			width: 1.0
+			points: root.table4
+		Color:
+			rgb: 0,0,1
+		Line:
+			width: 2
+			points: root.zero1,0,root.zero1,120
+		Line:
+			width: 2
+			points: root.zero2,120,root.zero2,240
+		Line:
+			width: 2
+			points: root.zero3,240,root.zero3,360
+		Line:
+			width: 2
+			points: root.zero4,360,root.zero4,480
+		Color:
+			rgb: 1, 0, 0
+		Line:
+			width: 2.0
+			points: 520, 0, 520, 480
+		
+	
+	Image:
+		id: imagePlay1
+		source: 'images/play.png'
+		size: 120, 120
+		canvas.after:
+			Color:
+				rgba: 0,0,0,root.alpha1
+			Rectangle:
+				size: 120,120
+				pos: 0,0
+	Image:
+		id: imagePlay2
+		source: 'images/play.png'
+		size: 120, 120
+		pos: 0, 120
+		canvas.after:
+			Color:
+				rgba: 0,0,0,root.alpha2
+			Rectangle:
+				size: 120,120
+				pos: 0,120
+	Image:
+		id: imagePlay3
+		source: 'images/play.png'
+		size: 120, 120
+		pos: 0, 240
+		canvas.after:
+			Color:
+				rgba: 0,0,0,root.alpha3
+			Rectangle:
+				size: 120,120
+				pos: 0,240
+	Image:
+		id: imagePlay4
+		source: 'images/play.png'
+		size: 120, 120
+		pos: 0, 360
+		canvas.after:
+			Color:
+				rgba: 0,0,0,root.alpha4
+			Rectangle:
+				size: 120,120
+				pos: 0,360
+	Image:
+		id: imageVolrate1
+		source: 'images/volrate.png'
+		size: 120, 120
+		pos: 120, 0
+		canvas.after:
+			Color:
+				rgba: 0,0,0,root.alpha1
+			Rectangle:
+				size: 680,120
+				pos: 120,0	
+	Image:
+		id: imageVolrate2
+		source: 'images/volrate.png'
+		size: 120, 120
+		pos: 120, 120
+		canvas.after:
+			Color:
+				rgba: 0,0,0,root.alpha2
+			Rectangle:
+				size: 680,120
+				pos: 120,120
+	Image:
+		id: imageVolrate3
+		source: 'images/volrate.png'
+		size: 120, 120
+		pos: 120, 240
+		canvas.after:
+			Color:
+				rgba: 0,0,0,root.alpha3
+			Rectangle:
+				size: 680,120
+				pos: 120,240
+	Image:
+		id: imageVolrate4
+		source: 'images/volrate.png'
+		size: 120, 120
+		pos: 120, 360
+		canvas.after:
+			Color:
+				rgba: 0,0,0,root.alpha4
+			Rectangle:
+				size: 680,120
+				pos: 120,360
+
+
+	Label:
+		id: niveau
+		text: str(root.volume)
+		color: 0,1,0.2,1
+		font_size:0
+		pos: root.center_x, root.center_y
+	Label:
+		id: rate
+		text: str(root.rate)
+		color: 1,0.2,0,1
+		font_size:0
+		pos: root.center_x, root.center_y	
+	Image:
+		id: imageNiveau
+		source: 'images/regle.png'
+		size: 800, 0
+		pos: root.center_x, 0
+	Image:
+		id: imageRateRegle
+		source: 'images/reglerate.png'
+		size: 800, 0
+		pos: 0, root.center_y

@@ -1,0 +1,85 @@
+#kivy 1.0
+	
+<Fond>
+	canvas:
+		Color:
+			rgba: 0.6,0,0.3,0.8
+		Ellipse:
+			size: 40, 40
+			pos: root.parent.disto*340+10, root.parent.reverb*380+10
+		Ellipse:
+			size: 40, 40
+			pos: root.parent.freq*340+410, root.parent.lfo*380+10
+		
+<FxWidget>
+	canvas:
+		Color:
+			rgb: 0.2,0.2,0.2
+		Line:
+			width: 4
+			points: 100,476,785,476
+		Line:
+			width: 4
+			points: 100,444,785,444
+		Rectangle:
+			size: 30,30
+			pos: 96+root.gainNorm*664,444
+
+	Image:
+		id: clipImage
+		source: "clip.png"
+		size: 80,40
+		pos: 10, 440
+						
+	Label:
+		color: 0.6,0,0.3,1
+		text: "i n p u t   g a i n"
+		pos: 250, 410
+	Label:
+		color: 0.6,0,0.3,1
+		text: str(root.gain)
+		pos: 350, 410
+	Image:
+		source: "fond.png"
+		pos: 10, 10
+		size: 380, 420
+	Image:
+		source: "fond.png"
+		pos: 410, 10
+		size: 380, 420
+	Label:
+		color: 0.7,0.7,0.7,1
+		text: "réverbération"
+		canvas.before:
+			PushMatrix
+			Rotate:
+				angle: 90
+				origin: self.center
+		canvas.after:
+			PopMatrix
+		font_size: 18
+		pos: -20, 160
+	Label:
+		color: 0.7,0.7,0.7,1
+		text: "distortion"
+		font_size: 18
+		pos: 140, -10
+	Label:
+		color: 0.7,0.7,0.7,1
+		text: "phaser"
+		canvas.before:
+			PushMatrix
+			Rotate:
+				angle: 90
+				origin: self.center
+		canvas.after:
+			PopMatrix
+		font_size: 18
+		pos: 390, 150
+	Label:
+		color: 0.7,0.7,0.7,1
+		text: "filtre résonnant"
+		font_size: 18
+		pos: 570, -10
+	Fond:
+	

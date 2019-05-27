@@ -1,0 +1,125 @@
+#kivy 1.0
+
+<DroneWidget>
+	canvas:	
+		Color:
+			rgb: 0.5,0.5,0.5
+		Rectangle:
+			pos:64,0
+			size: 800, 308
+		Color:
+			rgba: 0,0.6,0.3,0.5
+		Ellipse:
+			size: 36,36
+			pos: root.indice*60+183,325
+		Ellipse:
+			size: 36,36
+			pos: root.enveloppe*60+183,378
+		Ellipse:
+			size: 36,36
+			pos: root.volume*60+183,432		
+		Color:
+			rgb:0.5,0.5,0.5
+		Line:
+			width: 3
+			points: 200, 325, 780, 325
+		Line:
+			width: 3
+			points: 200, 361, 780, 361
+		Line:
+			width: 3
+			points: 200, 378, 780, 378
+		Line:
+			width: 3
+			points: 200, 414, 780, 414
+		Line:
+			width: 3
+			points: 200, 432, 780, 432
+		Line:
+			width: 3
+			points: 200, 467, 780, 467
+		
+		Color:
+			rgba: 0,0,0,root.masque
+		Rectangle:
+			size: 620,56
+			pos: 180,312
+	canvas.after:
+		Color:
+			rgba: 0,0.6,0.3,0.5
+		Rectangle:
+			size: 30,101
+			pos: root.marqueur1-15, 209
+		Rectangle:
+			size: 30,101
+			pos: root.marqueur2-15, 105
+		Rectangle:
+			size: 30,101
+			pos: root.marqueur3-15, 1
+	
+	Image:
+		id: clavier3
+		source: "images/clavier.png"
+		size: 1984,104
+		pos: -136-root.transpo3,0
+	Image:
+		id: clavier2
+		source: "images/clavier.png"
+		size: 1984,104
+		pos: -136-root.transpo2,104
+	Image:
+		id: clavier1
+		source: "images/clavier.png"
+		size: 1984,104
+		pos: -136-root.transpo1,208
+		
+	Label:
+		id: labelIndice
+		text: "i n d i c e   d e   m o d u l a t i o n   ( % )   :   "+str(int(root.indice*100))
+		color: 0.5,0.5,0.5,1
+		font_size: 18
+		pos: 450, 292
+	Label:
+		text: "v o l u m e   :   "+str(int(root.volume*10))
+		color: 0.5,0.5,0.5,1
+		font_size: 18
+		pos: 450, 400
+	Label:
+		text: "e n v e l o p p e   ( m s )   :   "+str(int(root.enveloppe*100))
+		color: 0.5,0.5,0.5,1
+		font_size: 18
+		pos: 450, 346
+	
+	Image:
+		id: transpo
+		source: "images/transpo.png"
+		size: 180,56
+		pos: 0,312
+	Image:
+		id: bouton1
+		source:"images/bouton1.png"
+		size: 64,104
+		pos:0, 208
+	Image:
+		id: bouton2
+		source:"images/bouton2.png"
+		size: 64,104
+		pos:0,104
+	Image:
+		id: bouton3
+		source:"images/bouton3.png"
+		size: 64,104
+		pos:0,0
+	Image:
+		id: diagramme
+		source:"images/diagramme0.png"
+		size: 180, 112
+		pos: 0,368
+		
+	Label:
+		text: "TRANSPOSITION"
+		color: 0,0.6,0.3,1
+		font_size: 18
+		pos: 40, 290
+	
+			

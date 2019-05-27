@@ -1,0 +1,177 @@
+#kivy 1.0
+
+
+
+<SynthWidget>
+	canvas:
+		Color:
+			rgb: 0.4, 0.4, 0.4
+		Line:
+			width: 4
+			rounded_rectangle: 25,25,50,430,20
+		Line:
+			width: 4
+			rounded_rectangle: 125,25,50,430,20
+		Line:
+			width: 4
+			rounded_rectangle: 225,25,50,430,20
+		Line:
+			width: 4
+			rounded_rectangle: 325,25,50,430,20
+		Line:
+			width: 4
+			rounded_rectangle: 425,25,50,430,20
+		Line:
+			width: 4
+			rounded_rectangle: 525,25,50,430,20
+		Line:
+			width: 4
+			rounded_rectangle: 625,25,50,430,20
+		Color:
+			rgb: 0.3,0.5,0.4
+		Ellipse:
+			size: 30,30
+			pos: 35, root.posVolume
+		Color:
+			rgb: 0.3,0.4,0.5
+		Ellipse:
+			size: 30,30
+			pos: 135, root.posCutoff
+		Ellipse:
+			size: 30,30
+			pos: 235, root.posResonnance
+		Color:
+			rgb:0.2,0.5,0.5
+		Ellipse:
+			size: 30,30
+			pos: 335, root.posAttaque
+		Ellipse:
+			size: 30,30
+			pos: 435, root.posRelease
+		Color:
+			rgb: 0.4,0.3,0.5
+		Color:
+			rgb: 0.5,0.4,0.3
+		Ellipse:
+			size: 30,30
+			pos: 535, root.posEffectMix
+		Ellipse:
+			size: 30,30
+			pos: 635, root.posEffectRate
+		Color:
+			rgb:root.color
+		Rectangle:
+			size: 15,5
+			pos:740,330
+
+
+	Label:
+		id: niveau
+		text: "volume"
+		color: 0.6,1,0.8,1
+		font_size:20
+		pos: 0, 200
+		canvas.before:
+			PushMatrix
+			Rotate:
+				angle: 90
+				origin: self.center
+		canvas.after:
+			PopMatrix
+	Label:
+		id: niveau
+		text: "cutoff"
+		color: 0.6,0.8,1,1
+		font_size:20
+		pos: 100, 200
+		canvas.before:
+			PushMatrix
+			Rotate:
+				angle: 90
+				origin: self.center
+		canvas.after:
+			PopMatrix
+	Label:
+		id: niveau
+		text: "resonnance"
+		color: 0.6,0.8,1,1
+		font_size:20
+		pos: 200, 200
+		canvas.before:
+			PushMatrix
+			Rotate:
+				angle: 90
+				origin: self.center
+		canvas.after:
+			PopMatrix
+	
+		
+	Label:
+		id: niveau
+		text: "attack"
+		color: 0.4,1,1,1
+		font_size:20
+		pos: 300, 200
+		canvas.before:
+			PushMatrix
+			Rotate:
+				angle: 90
+				origin: self.center
+		canvas.after:
+			PopMatrix
+	Label:
+		id: niveau
+		text: "release"
+		color: 0.4,1,1,1
+		font_size:20
+		pos: 400, 200
+		canvas.before:
+			PushMatrix
+			Rotate:
+				angle: 90
+				origin: self.center
+		canvas.after:
+			PopMatrix
+	Label:
+		id: niveau
+		text: "tremolo depth"
+		color: 1,0.8,0.6,1
+		font_size:20
+		pos: 500, 200
+		canvas.before:
+			PushMatrix
+			Rotate:
+				angle: 90
+				origin: self.center
+		canvas.after:
+			PopMatrix
+	Label:
+		id: niveau
+		text: "tremolo rate"
+		color: 1,0.8,0.6,1
+		font_size:20
+		pos: 600, 200
+		canvas.before:
+			PushMatrix
+			Rotate:
+				angle: 90
+				origin: self.center
+		canvas.after:
+			PopMatrix
+	
+	Label:
+		text: "Wah"
+		color: 0.8,0.6,1,1
+		font_size:20
+		pos: 698, 140
+			
+	Image:
+		id: envMod
+		source: "images/off.png"
+		pos:700,60
+
+	Label:
+		text: "Midi"
+		color: 0.8,0.6,1,1
+		font_size:20
+		pos: 698, 310
